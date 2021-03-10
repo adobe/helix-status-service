@@ -14,6 +14,8 @@
 
 ## Usage
 
+The service is installed and available for Adobe I/O Runtime at `https://adobeioruntime.net/api/v1/web/helix/helix-services/status@latest`.
+
 ```bash
 curl https://adobeioruntime.net/api/v1/web/helix/helix-services/status-service@v1
 ```
