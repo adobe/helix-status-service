@@ -73,7 +73,8 @@ jobs:
       # for more available parameters
       - helix-post-deploy/monitoring:
           statuspage_name: Helix Status Service
-          action_name: helix-status
+          action_name: status
+          newrelic_name: @adobe/helix-status
           statuspage_group: Delivery
           newrelic_group_policy: Delivery Repeated Failure
           aws: true
