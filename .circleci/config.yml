@@ -73,9 +73,10 @@ jobs:
       # for more available parameters
       - helix-post-deploy/monitoring:
           statuspage_name: Helix Status Service
+          action_name: helix-status
           statuspage_group: Delivery
           newrelic_group_policy: Delivery Repeated Failure
-          incubator: true # remove only when promoting service to production
+          aws: true
 
   branch-deploy:
     executor: node12
