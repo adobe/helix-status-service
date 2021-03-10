@@ -12,7 +12,6 @@
 const { wrap } = require('@adobe/openwhisk-action-utils');
 const { logger } = require('@adobe/openwhisk-action-logger');
 const { wrap: status } = require('@adobe/helix-status');
-const { epsagon } = require('@adobe/helix-epsagon');
 
 /**
  * This is the main function
@@ -26,7 +25,6 @@ function main({ name = 'world' }) {
 }
 
 module.exports.main = wrap(main)
-  .with(epsagon)
   .with(status)
   .with(logger.trace)
   .with(logger);
