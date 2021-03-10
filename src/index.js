@@ -11,20 +11,23 @@
  */
 const { wrap } = require('@adobe/openwhisk-action-utils');
 const { logger } = require('@adobe/openwhisk-action-logger');
-const { wrap: status } = require('@adobe/helix-status');
+const { Response } = require('@adobe/helix-fetch');
+const { report } = require('@adobe/helix-status');
 
 /**
  * This is the main function
- * @param {string} name name of the person to greet
- * @returns {object} a greeting
+ * @param {Request} req Universal API Request
+ * @param {HEDYContext} context Universal API Context
+ * @returns {Response} a status response
  */
-function main({ name = 'world' }) {
-  return {
-    body: `Hello, ${name}.`,
-  };
+async function main(req, context) {
+  const result = await report({}, context.env);
+  return new Response(JSON.stringify(result.body), {
+    headers: result.headers,
+    status: result.statusCode,
+  });
 }
 
 module.exports.main = wrap(main)
-  .with(status)
   .with(logger.trace)
   .with(logger);

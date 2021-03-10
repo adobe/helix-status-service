@@ -22,19 +22,19 @@ const { expect } = chai;
 
 createTargets().forEach((target) => {
   describe(`Post-Deploy Tests (${target.title()})`, () => {
-    it('Reports a status', async () => {
+    it('status is returned', async () => {
       const url = `${target.urlPath()}`;
       await chai
         .request(target.host())
         .get(url)
         .then((response) => {
           expect(response).to.have.status(200);
-          expect(response).to.be.text;
-          expect(response.text).to.be.a('string').that.includes('Welcome to Helix Pages!');
+          expect(response).to.be.json;
+          expect(response.body).to.contain({ status: 'OK' });
         }).catch((e) => {
           e.message = `At ${url}\n      ${e.message}`;
           throw e;
         });
-    }).timeout(10000);
+    }).timeout(20000);
   });
 });

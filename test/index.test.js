@@ -11,20 +11,22 @@
  */
 
 /* eslint-env mocha */
-
-'use strict';
-
 const assert = require('assert');
-const index = require('../src/index.js').main;
+const { Request } = require('@adobe/helix-fetch');
+const { main } = require('../src/index.js');
+const pkgJson = require('../package.json');
 
 describe('Index Tests', () => {
-  it('index function is present', async () => {
-    const result = await index({});
-    assert.deepEqual(result, { body: 'Hello, world.' });
-  });
-
-  it('index function returns an object', async () => {
-    const result = await index({});
-    assert.equal(typeof result, 'object');
+  it('index function returns a response', async () => {
+    const resp = await main(new Request('https://helix-status-service.com'), {});
+    assert.equal(resp.status, 200);
+    const status = await resp.json();
+    assert.ok(status.response_time !== undefined);
+    delete status.response_time;
+    assert.deepEqual(status, {
+      process: {},
+      status: 'OK',
+      version: pkgJson.version,
+    });
   });
 });

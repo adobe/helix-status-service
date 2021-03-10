@@ -1,6 +1,6 @@
 {
   "name": "@adobe/helix-status-service",
-  "version": "1.0.0",
+  "version": "9.0.8-test",
   "private": true,
   "description": "Helix Status Service",
   "main": "src/index.js",
@@ -19,7 +19,7 @@
   },
   "wsk": {
     "namespace": "helix",
-    "name": "helix-services/status-service@${version}",
+    "name": "helix-services/status@${version}",
     "memory": 512
   },
   "repository": {
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/adobe/helix-status-service#readme",
   "dependencies": {
+    "@adobe/helix-fetch": "2.1.7",
     "@adobe/helix-status": "9.0.9",
     "@adobe/openwhisk-action-logger": "2.4.1",
     "@adobe/openwhisk-action-utils": "4.4.1"
