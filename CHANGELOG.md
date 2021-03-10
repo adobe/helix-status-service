@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/adobe/helix-status-service/compare/v1.0.0...v1.0.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* **ci:** fix new relic names ([c06f68e](https://github.com/adobe/helix-status-service/commit/c06f68e957e2a50ca5308b79af33434c029bd0ba))
+* **ci:** fix new relic names ([40e3a6d](https://github.com/adobe/helix-status-service/commit/40e3a6d309a9a6a3487f12d62007a6ac52551b49))
+
 # 1.0.0 (2021-03-10)
 
 
