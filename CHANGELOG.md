@@ -1,3 +1,10 @@
+# 1.0.0 (2021-03-10)
+
+
+### Features
+
+* add status service ([d560666](https://github.com/adobe/helix-status-service/commit/d5606663125194f6116fdd0e2085241af715bd22))
+
 ## [1.9.37](https://github.com/adobe/helix-service/compare/v1.9.36...v1.9.37) (2021-03-09)
 
 
