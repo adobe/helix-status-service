@@ -70,7 +70,7 @@ class GoogleTarget extends OpenwhiskTarget {
   }
 
   host() {
-    return `https://${process.env.HLX_GOOGLE_PROJECT_ID}.cloudfunctions.net`;
+    return `https://${process.env.HLX_GOOGLE_REGION}-${process.env.HLX_GOOGLE_PROJECT_ID}.cloudfunctions.net`;
   }
 
   urlPath() {
