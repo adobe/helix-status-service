@@ -59,7 +59,7 @@ jobs:
           command: git checkout -- package-lock.json
       - helix-post-deploy/config-wsk
       - helix-post-deploy/config-env
-      - helix-gcloud-setup/file
+      - helix-gcloud-setup/load-config
       - run:
           name: Semantic Release
           command: npm run semantic-release
