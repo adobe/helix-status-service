@@ -74,10 +74,8 @@ jobs:
       # see https://circleci.com/orbs/registry/orb/adobe/helix-post-deploy
       # for more available parameters
       - helix-post-deploy/monitoring:
-          statuspage_name: Helix Status Service
           action_name: status
           newrelic_name: "@adobe/helix-status"
-          statuspage_group: Delivery
           newrelic_group_policy: Delivery Repeated Failure
           aws: true
 
