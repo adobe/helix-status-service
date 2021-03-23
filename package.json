@@ -1,6 +1,6 @@
 {
   "name": "@adobe/helix-status-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "Helix Status Service",
   "main": "src/index.js",
