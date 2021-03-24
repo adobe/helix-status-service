@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/adobe/helix-status-service/compare/v1.0.4...v1.1.0) (2021-03-24)
+
+
+### Features
+
+* **google:** deploy to google ([1c0714d](https://github.com/adobe/helix-status-service/commit/1c0714dff4abac80901a9ba0fc661a9eb9063a0a))
+
 ## [1.0.4](https://github.com/adobe/helix-status-service/compare/v1.0.3...v1.0.4) (2021-03-23)
 
 
