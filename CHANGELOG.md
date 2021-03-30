@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/adobe/helix-status-service/compare/v1.1.3...v1.1.4) (2021-03-30)
+
+
+### Bug Fixes
+
+* trigger google deploy again ([0974d1a](https://github.com/adobe/helix-status-service/commit/0974d1a1f4b29a235f24eb64429b9ad55fd4d30f))
+
 ## [1.1.3](https://github.com/adobe/helix-status-service/compare/v1.1.2...v1.1.3) (2021-03-27)
 
 
