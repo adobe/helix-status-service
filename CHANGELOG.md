@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/adobe/helix-status-service/compare/v1.1.8...v1.1.9) (2021-04-13)
+
+
+### Bug Fixes
+
+* use helix universal ([e2c26f6](https://github.com/adobe/helix-status-service/commit/e2c26f6f8dd934deedab286efd83d8f138c0b31b))
+
 ## [1.1.8](https://github.com/adobe/helix-status-service/compare/v1.1.7...v1.1.8) (2021-04-12)
 
 
