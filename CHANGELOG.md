@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/adobe/helix-status-service/compare/v1.1.9...v1.1.10) (2021-04-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-shared to v7.25.0 ([#38](https://github.com/adobe/helix-status-service/issues/38)) ([922434e](https://github.com/adobe/helix-status-service/commit/922434e3da5cc3218ee2b62ed6e875409a6e9018))
+
 ## [1.1.9](https://github.com/adobe/helix-status-service/compare/v1.1.8...v1.1.9) (2021-04-13)
 
 
