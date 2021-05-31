@@ -77,7 +77,7 @@ jobs:
           action_name: status
           newrelic_name: "@adobe/helix-status"
           newrelic_group_policy: Delivery Repeated Failure
-          targets: universal, aws, adobeio
+          targets: universal, aws, google, adobeio
 
   branch-deploy:
     executor: node12
