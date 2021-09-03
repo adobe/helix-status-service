@@ -1,3 +1,10 @@
+## [1.1.26](https://github.com/adobe/helix-status-service/compare/v1.1.25...v1.1.26) (2021-09-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-universal-logger to v1.0.8 ([#105](https://github.com/adobe/helix-status-service/issues/105)) ([50379ba](https://github.com/adobe/helix-status-service/commit/50379bae7adca2a9aa50f5f1e46586bccb016848))
+
 ## [1.1.25](https://github.com/adobe/helix-status-service/compare/v1.1.24...v1.1.25) (2021-09-03)
 
 
