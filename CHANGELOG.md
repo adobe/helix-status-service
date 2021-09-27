@@ -1,3 +1,10 @@
+## [1.1.31](https://github.com/adobe/helix-status-service/compare/v1.1.30...v1.1.31) (2021-09-27)
+
+
+### Bug Fixes
+
+* **deps:** use secrets-manager ([5ebbfd4](https://github.com/adobe/helix-status-service/commit/5ebbfd44eb99846645489d3a53e84c2d818f3937))
+
 ## [1.1.30](https://github.com/adobe/helix-status-service/compare/v1.1.29...v1.1.30) (2021-09-22)
 
 
