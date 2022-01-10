@@ -1,3 +1,10 @@
+## [1.1.35](https://github.com/adobe/helix-status-service/compare/v1.1.34...v1.1.35) (2022-01-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-universal to v2 ([#157](https://github.com/adobe/helix-status-service/issues/157)) ([0e1992a](https://github.com/adobe/helix-status-service/commit/0e1992abf87c13a8fa03b330157d4001813ed463))
+
 ## [1.1.34](https://github.com/adobe/helix-status-service/compare/v1.1.33...v1.1.34) (2021-11-26)
 
 
