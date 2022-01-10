@@ -12,7 +12,7 @@
 
 /* eslint-env mocha */
 const assert = require('assert');
-const { Request } = require('@adobe/helix-universal');
+const { Request } = require('@adobe/helix-fetch');
 const { main } = require('../src/index.js');
 const pkgJson = require('../package.json');
 
