@@ -1,3 +1,10 @@
+## [1.1.40](https://github.com/adobe/helix-status-service/compare/v1.1.39...v1.1.40) (2022-02-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-fetch to v3.0.5 ([74eb8e9](https://github.com/adobe/helix-status-service/commit/74eb8e9e24ab977b61feb3590b9cc17aa2867ae1))
+
 ## [1.1.39](https://github.com/adobe/helix-status-service/compare/v1.1.38...v1.1.39) (2022-02-09)
 
 
