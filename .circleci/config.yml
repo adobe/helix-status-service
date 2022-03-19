@@ -9,7 +9,6 @@ executors:
 
 orbs:
   helix-post-deploy: adobe/helix-post-deploy@3.0.0
-  helix-gcloud-setup: adobe/helix-gcloud-setup@1.0.1
 
 commands:
   setup:
@@ -57,9 +56,7 @@ jobs:
       - run:
           name: revert changes to package-lock.json
           command: git checkout -- package-lock.json
-      - helix-post-deploy/config-wsk
       - helix-post-deploy/config-env
-      - helix-gcloud-setup/load-config
       - run:
           name: Semantic Release
           command: npm run semantic-release
@@ -76,7 +73,7 @@ jobs:
       - helix-post-deploy/monitoring:
           action_name: status
           newrelic_name: "@adobe/helix-status"
-          targets: aws, universal, google, adobeio
+          targets: aws, universal
 
   branch-deploy:
     executor: node14
@@ -86,7 +83,6 @@ jobs:
           name: revert changes to package-lock.json
           command: git checkout -- package-lock.json
       - helix-post-deploy/config-wsk
-      - helix-gcloud-setup/load-config
       - run:
           name: Branch Deployment
           command: npm run deploy-ci
