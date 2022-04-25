@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/adobe/helix-status-service/compare/v1.1.45...v1.2.0) (2022-04-25)
+
+
+### Features
+
+* new releasing ([a73b7e2](https://github.com/adobe/helix-status-service/commit/a73b7e22307bc39f81fe7dec1ed0ec5fafa0dbbd))
+
 ## [1.1.45](https://github.com/adobe/helix-status-service/compare/v1.1.44...v1.1.45) (2022-03-21)
 
 
