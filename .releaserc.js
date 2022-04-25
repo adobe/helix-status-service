@@ -9,7 +9,7 @@ module.exports = {
       npmPublish: false,
     }],
     ['@semantic-release/exec', {
-      verifyReleaseCmd: 'npm version --no-git-tag-version --no-commit-hooks ${nextRelease.version}',
+      // verifyReleaseCmd: 'npm version --no-git-tag-version --no-commit-hooks ${nextRelease.version}',
       prepareCmd: 'npm run deploy && npm run test-postdeploy',
       publishCmd: 'npm run deploy-routes'
     }],
@@ -21,6 +21,4 @@ module.exports = {
   ],
   branches: ['main'],
   debug: true,
-  dryRun: true,
-  ci: true,
 };
