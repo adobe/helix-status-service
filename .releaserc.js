@@ -14,7 +14,8 @@ module.exports = {
     }],
     ['@semantic-release/exec', {
       verifyReleaseCmd: 'cat package.json',
-      publishCmd: 'npm run deploy'
+      prepareReleaseCmd: 'cat package.json',
+      _publishCmd: 'npm run deploy'
     }],
     '@semantic-release/github',
   ],
