@@ -8,16 +8,19 @@ module.exports = {
     ["@semantic-release/npm", {
       npmPublish: false,
     }],
+    ['@semantic-release/exec', {
+      verifyReleaseCmd: 'npm version --no-git-tag-version --no-commit-hooks ${nextRelease.version}',
+      prepareCmd: 'npm run deploy && npm run test-postdeploy',
+      publishCmd: 'npm run deploy-routes'
+    }],
     ['@semantic-release/git', {
       assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
       message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
     }],
-    ['@semantic-release/exec', {
-      verifyReleaseCmd: 'cat package.json',
-      prepareReleaseCmd: 'cat package.json',
-      _publishCmd: 'npm run deploy'
-    }],
     '@semantic-release/github',
   ],
   branches: ['main'],
+  debug: true,
+  dryRun: true,
+  ci: true,
 };
