@@ -13,16 +13,14 @@
     "docs": "npx jsdoc2md -c .jsdoc.json --files 'src/*.js'  > docs/API.md",
     "commit": "git-cz",
     "build": "hedy -v",
-    "deploy": "hedy -v --deploy --test=/_status_check/healthcheck.json",
+    "deploy": "hedy -v --deploy --test=/_status_check/healthcheck.json --fastly-service-id 0trc7KZPj73TyFfFhsUyWu --checkpath /_status_check/healthcheck.json",
     "deploy-routes": "hedy --no-build -no-hints -l major",
     "deploy-ci": "hedy -v --deploy --test=/_status_check/healthcheck.json --pkgVersion=ci$CIRCLE_BUILD_NUM -l ci"
   },
   "wsk": {
-    "target": "aws",
     "namespace": "helix",
     "name": "helix-services/status@${version}",
-    "memory": 512,
-    "fastlyServiceId!important": ""
+    "memory": 512
   },
   "repository": {
     "type": "git",
