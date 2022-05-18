@@ -42,7 +42,7 @@ class OpenwhiskTarget {
   }
 
   enabled() {
-    return true;
+    return false;
   }
 }
 
