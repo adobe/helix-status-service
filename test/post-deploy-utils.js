@@ -91,8 +91,8 @@ const ALL_TARGETS = [
 
 function createTargets(opts) {
   return ALL_TARGETS
-    .filter((target) => target.enabled())
-    .map((TargetClass) => new TargetClass(opts));
+    .map((TargetClass) => new TargetClass(opts))
+    .filter((target) => target.enabled());
 }
 
 module.exports = {
