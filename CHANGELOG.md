@@ -1,3 +1,12 @@
+## [1.3.3](https://github.com/adobe/helix-status-service/compare/v1.3.2...v1.3.3) (2022-05-19)
+
+
+### Bug Fixes
+
+* **deploy:** exclude ow again ([d015587](https://github.com/adobe/helix-status-service/commit/d015587aae89c34ace30551332a94c24d353ce40))
+* **deploy:** explicitly target openwhisk ([95048e7](https://github.com/adobe/helix-status-service/commit/95048e7b16fc6fedf13a0726ba39117e839ef26f))
+* **deploy:** use this service's status as the health check for universal runtime ([501e447](https://github.com/adobe/helix-status-service/commit/501e447d3a6372b160f7f49f0aa97398eda9d91a))
+
 ## [1.3.2](https://github.com/adobe/helix-status-service/compare/v1.3.1...v1.3.2) (2022-05-16)
 
 
