@@ -11,7 +11,7 @@
  */
 const wrap = require('@adobe/helix-shared-wrap');
 const { logger } = require('@adobe/helix-universal-logger');
-const { Response } = require('@adobe/helix-fetch');
+const { Response } = require('@adobe/fetch');
 const { report } = require('@adobe/helix-status');
 
 /**
