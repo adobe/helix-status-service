@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/adobe/helix-status-service/compare/v1.3.5...v1.3.6) (2022-09-23)
+
+
+### Bug Fixes
+
+* @adobe/helix-fetch -> @adobe/fetch ([782fac7](https://github.com/adobe/helix-status-service/commit/782fac7b71ecfa74d3f7d2d9d588b771e62bde4b))
+
 ## [1.3.5](https://github.com/adobe/helix-status-service/compare/v1.3.4...v1.3.5) (2022-06-30)
 
 
