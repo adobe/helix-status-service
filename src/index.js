@@ -9,8 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-const wrap = require('@adobe/helix-shared-wrap');
-const { logger } = require('@adobe/helix-universal-logger');
 const { Response } = require('@adobe/fetch');
 const { report } = require('@adobe/helix-status');
 
@@ -28,6 +26,4 @@ async function main(req, context) {
   });
 }
 
-module.exports.main = wrap(main)
-  .with(logger.trace)
-  .with(logger);
+module.exports.main = main;
