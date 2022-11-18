@@ -1,3 +1,10 @@
+## [1.3.11](https://github.com/adobe/helix-status-service/compare/v1.3.10...v1.3.11) (2022-11-18)
+
+
+### Bug Fixes
+
+* remove @adobe/helix-universal-logger ([b2d5031](https://github.com/adobe/helix-status-service/commit/b2d5031cb1be0f584583a53aa3c6dffc29eb3869))
+
 ## [1.3.10](https://github.com/adobe/helix-status-service/compare/v1.3.9...v1.3.10) (2022-10-26)
 
 
