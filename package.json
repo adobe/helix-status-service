@@ -21,7 +21,7 @@
     "namespace": "helix",
     "name": "helix-services/status@${version}",
     "memory": 512,
-    "nodeVersion": 16
+    "nodeVersion": 18
   },
   "repository": {
     "type": "git",
