@@ -20,7 +20,8 @@
     "target": "aws",
     "namespace": "helix",
     "name": "helix-services/status@${version}",
-    "memory": 512
+    "memory": 512,
+    "nodeVersion": 18
   },
   "repository": {
     "type": "git",
