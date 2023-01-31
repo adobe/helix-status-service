@@ -12,7 +12,7 @@
 
 /* eslint-disable max-classes-per-file, class-methods-use-this */
 import { config } from 'dotenv';
-import packjson from '../test/package.cjs';
+import packjson from './package.cjs';
 
 config();
 

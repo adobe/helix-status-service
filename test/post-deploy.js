@@ -32,7 +32,7 @@ createTargets().forEach((target) => {
       });
       assert.strictEqual(res.status, 200);
       const json = await res.json();
-      assert.deepStrictEqual(json , {});
+      assert.deepStrictEqual(json, {});
     }).timeout(10000);
   });
 });
