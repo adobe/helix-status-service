@@ -11,10 +11,10 @@
  */
 
 /* eslint-env mocha */
-const assert = require('assert');
-const { Request } = require('@adobe/fetch');
-const { main } = require('../src/index.js');
-const pkgJson = require('../package.json');
+import assert from 'assert';
+import { Request } from '@adobe/fetch';
+import { main } from '../src/index.js';
+import pkgJson from './package.cjs';
 
 describe('Index Tests', () => {
   it('index function returns a response', async () => {

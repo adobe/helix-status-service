@@ -12,29 +12,33 @@
 
 /* eslint-env mocha */
 /* eslint-disable no-unused-expressions */
-
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const { createTargets } = require('./post-deploy-utils.js');
-
-chai.use(chaiHttp);
-const { expect } = chai;
+import assert from 'assert';
+import { noCache } from '@adobe/fetch';
+import { createTargets } from './post-deploy-utils.js';
 
 createTargets().forEach((target) => {
+  const fetchContext = noCache();
+  const { fetch } = fetchContext;
+
+  after(async () => {
+    await fetchContext.reset();
+  });
+
   describe(`Post-Deploy Tests (${target.title()})`, () => {
     it('status is returned', async () => {
-      const url = `${target.urlPath()}`;
-      await chai
-        .request(target.host())
-        .get(url)
-        .then((response) => {
-          expect(response).to.have.status(200);
-          expect(response).to.be.json;
-          expect(response.body).to.contain({ status: 'OK' });
-        }).catch((e) => {
-          e.message = `At ${url}\n      ${e.message}`;
-          throw e;
-        });
-    }).timeout(20000);
+      const url = target.url('');
+      const res = await fetch(url);
+      assert.strictEqual(res.status, 200);
+      const version = target.version.startsWith('ci')
+        ? `0.0.0+${target.version}`
+        : target.version;
+      const json = await res.json();
+      delete json.response_time;
+      assert.deepStrictEqual(json, {
+        process: {},
+        status: 'OK',
+        version,
+      });
+    }).timeout(10000);
   });
 });
