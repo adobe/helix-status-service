@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Adobe. All rights reserved.
+ * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,29 +10,32 @@
  * governing permissions and limitations under the License.
  */
 
-/* eslint-disable max-classes-per-file */
-/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file, class-methods-use-this */
+import { config } from 'dotenv';
+import packjson from '../test/package.cjs';
 
-const packjson = require('../package.json');
-require('dotenv').config();
+config();
 
-class OpenwhiskTarget {
+export class OpenwhiskTarget {
   constructor(opts = {}) {
     Object.assign(this, {
       namespace: 'helix',
-      package: 'helix-services',
-      name: 'status',
+      package: 'helix3',
+      name: packjson.name.replace('@adobe/helix-', ''),
       version: String(packjson.version),
     }, opts);
     if (process.env.CI && process.env.CIRCLE_BUILD_NUM && process.env.CIRCLE_BRANCH !== 'main' && !opts.version) {
       this.version = `ci${process.env.CIRCLE_BUILD_NUM}`;
     }
+    this.headers = process.env.HLX_TEST_HEADERS ? JSON.parse(process.env.HLX_TEST_HEADERS) : {};
   }
 
+  // eslint-disable-next-line class-methods-use-this
   title() {
     return 'OpenWhisk';
   }
 
+  // eslint-disable-next-line class-methods-use-this
   host() {
     return 'https://adobeioruntime.net';
   }
@@ -41,16 +44,27 @@ class OpenwhiskTarget {
     return `/api/v1/web/${this.namespace}/${this.package}/${this.name}@${this.version}`;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   enabled() {
-    return false;
+    return true;
+  }
+
+  url(path, query) {
+    const url = new URL(`${this.host()}${this.urlPath()}${path}`);
+    if (query) {
+      Object.entries(query).forEach(([name, value]) => url.searchParams.append(name, value));
+    }
+    return url;
   }
 }
 
-class AWSTarget extends OpenwhiskTarget {
+export class AWSTarget extends OpenwhiskTarget {
+  // eslint-disable-next-line class-methods-use-this
   title() {
     return 'AWS';
   }
 
+  // eslint-disable-next-line class-methods-use-this
   host() {
     return `https://${process.env.HLX_AWS_API}.execute-api.${process.env.HLX_AWS_REGION}.amazonaws.com`;
   }
@@ -59,13 +73,13 @@ class AWSTarget extends OpenwhiskTarget {
     return `/${this.package}/${this.name}/${this.version}`;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   enabled() {
     return process.env.HLX_AWS_API && process.env.HLX_AWS_REGION;
   }
 }
 
-// eslint-disable-next-line no-unused-vars
-class GoogleTarget extends OpenwhiskTarget {
+export class GoogleTarget extends OpenwhiskTarget {
   title() {
     return 'Google';
   }
@@ -84,19 +98,10 @@ class GoogleTarget extends OpenwhiskTarget {
 }
 
 const ALL_TARGETS = [
-  OpenwhiskTarget,
   AWSTarget,
   // GoogleTarget,
 ];
 
-function createTargets(opts) {
-  return ALL_TARGETS
-    .map((TargetClass) => new TargetClass(opts))
-    .filter((target) => target.enabled());
+export function createTargets(opts) {
+  return ALL_TARGETS.map((TargetClass) => new TargetClass(opts));
 }
-
-module.exports = {
-  OpenwhiskTarget,
-  AWSTarget,
-  createTargets,
-};
