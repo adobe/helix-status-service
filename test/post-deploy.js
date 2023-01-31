@@ -27,12 +27,18 @@ createTargets().forEach((target) => {
   describe(`Post-Deploy Tests (${target.title()})`, () => {
     it('status is returned', async () => {
       const url = target.url('');
-      const res = await fetch(url, {
-        method: 'GET',
-      });
+      const res = await fetch(url);
       assert.strictEqual(res.status, 200);
+      const version = target.version.startsWith('ci')
+        ? `0.0.0+${target.version}`
+        : target.version;
       const json = await res.json();
-      assert.deepStrictEqual(json, {});
+      delete json.response_time;
+      assert.deepStrictEqual(json, {
+        process: {},
+        status: 'OK',
+        version,
+      });
     }).timeout(10000);
   });
 });
