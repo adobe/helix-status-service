@@ -34,13 +34,13 @@
   },
   "homepage": "https://github.com/adobe/helix-status-service#readme",
   "dependencies": {
-    "@adobe/fetch": "3.6.0",
-    "@adobe/helix-status": "9.2.19"
+    "@adobe/fetch": "4.0.1",
+    "@adobe/helix-status": "10.0.0"
   },
   "devDependencies": {
     "@adobe/eslint-config-helix": "2.0.1",
     "@adobe/helix-deploy": "8.1.2",
-    "@adobe/helix-universal": "3.3.4",
+    "@adobe/helix-universal": "4.1.1",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
