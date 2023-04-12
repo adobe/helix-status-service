@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/adobe/helix-status-service#readme",
   "dependencies": {
-    "@adobe/fetch": "4.0.6",
+    "@adobe/fetch": "4.0.7",
     "@adobe/helix-status": "10.0.4"
   },
   "devDependencies": {
