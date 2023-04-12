@@ -1,3 +1,10 @@
+## [1.3.18](https://github.com/adobe/helix-status-service/compare/v1.3.17...v1.3.18) (2023-04-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/fetch to v4.0.7 ([#364](https://github.com/adobe/helix-status-service/issues/364)) ([1fa114f](https://github.com/adobe/helix-status-service/commit/1fa114f8c672e17573dfc8d6cc38c33f9ced8fd4))
+
 ## [1.3.17](https://github.com/adobe/helix-status-service/compare/v1.3.16...v1.3.17) (2023-03-21)
 
 
