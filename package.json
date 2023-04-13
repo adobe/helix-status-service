@@ -40,12 +40,12 @@
   },
   "homepage": "https://github.com/adobe/helix-status-service#readme",
   "dependencies": {
-    "@adobe/fetch": "4.0.7",
+    "@adobe/fetch": "4.0.8",
     "@adobe/helix-status": "10.0.5"
   },
   "devDependencies": {
     "@adobe/eslint-config-helix": "2.0.2",
-    "@adobe/helix-deploy": "9.0.21",
+    "@adobe/helix-deploy": "9.0.22",
     "@adobe/helix-universal": "4.1.7",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",
