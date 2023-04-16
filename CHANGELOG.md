@@ -1,3 +1,10 @@
+## [1.3.22](https://github.com/adobe/helix-status-service/compare/v1.3.21...v1.3.22) (2023-04-16)
+
+
+### Bug Fixes
+
+* **deps:** update adobe fixes ([5526db2](https://github.com/adobe/helix-status-service/commit/5526db2724c352b3782afa222b0508f53d67c364))
+
 ## [1.3.21](https://github.com/adobe/helix-status-service/compare/v1.3.20...v1.3.21) (2023-04-13)
 
 
