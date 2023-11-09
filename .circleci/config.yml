@@ -50,12 +50,6 @@ jobs:
           command: npm run semantic-release
       - store_test_results:
           path: junit
-      # see https://circleci.com/orbs/registry/orb/adobe/helix-post-deploy
-      # for more available parameters
-      - helix-post-deploy/monitoring:
-          action_name: status
-          newrelic_name: "@adobe/helix-status"
-          targets: aws, universal
 
   branch-deploy:
     executor: node18
